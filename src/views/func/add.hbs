@@ -1,0 +1,77 @@
+<div class="app-content content">
+    <div class="content-wrapper">
+        <div class="content-header row">
+            <div class="content-header-left col-md-8 col-12 mb-2">
+                <h3 class="content-header-title mb-0 d-inline-block"><i class="las la-network-wired"></i> Create Proxy</h3>
+            </div>
+            <div class="content-header-right col-md-4 col-12 d-none d-md-inline-block">
+                <div class="btn-group float-md-right">
+                </div>
+            </div>
+        </div>
+
+        <div class="content-body">
+            <div class="row match-height">
+                <div class="col-xl-9 col-12">
+                    <section class="card">
+                        <div class="card-content">
+                            <div class="card-body">
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-md-2 col-12">
+                                            <div class="crypto-circle rounded-circle">
+                                                <i class="ft-cpu"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-10 col-12">
+                                            <form class="form-horizontal" action="/proxy/add" method="POST">
+                                                <h5>1. Proxy Details</h5>
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <fieldset class="form-label-group">
+                                                            <input type='text' name='port' class="form-control" 
+                                                                value="" required="yes" autofocus="">
+                                                            <label for="port">Local Port</label>
+                                                        </fieldset>
+                                                    </div>
+                                                </div>
+                                                <p class="text-muted">Specify the local port.</p>
+
+                                                <h5 class="mt-2">2. Basic Details</h5>
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <fieldset class="form-label-group">
+                                                            <input type="text" class="form-control" name="name"
+                                                                value="My Socks Proxy 1" required="" autofocus="">
+                                                            <label for="name">Name your Proxy</label>
+                                                        </fieldset>
+                                                    </div>
+                                                </div>
+                                                <p class="text-muted">Specify a name for the Proxy.</p>
+
+                                                <div class="row">
+                                                    <div class="col-12 text-right">
+                                                        <a href="/proxy" class="mr-2">Cancel</a> <button type="submit"
+                                                            class="btn-gradient-primary my-1">Deploy Function</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="col-xl-3 col-lg-12">
+                    <h6 class="mt-4">What is Serverless Function?</h6>
+                    <p>Industry has progressed from Infrastructure as a Service (IaaS) to Platform as a Service (PaaS) to Functions as a Service (FaaS). </p>
+                    <p>Planetr Function is powered by <a href="https://webassembly.org/" target="_blank">WebAssembly</a>. </p>                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

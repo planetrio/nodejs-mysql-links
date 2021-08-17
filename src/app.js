@@ -9,6 +9,7 @@ import expressMySQLSession from "express-mysql-session";
 import config from "./config";
 import routes from "./routes";
 import "./lib/passport";
+const fileUpload = require('express-fileupload');
 
 // Intializations
 const MySQLStore = expressMySQLSession(session);
@@ -19,15 +20,16 @@ const app = express();
 app.set("port", port);
 app.set("views", path.join(__dirname, "views"));
 app.engine(
-  ".hbs",
-  exphbs({
-    defaultLayout: "main",
-    layoutsDir: path.join(app.get("views"), "layouts"),
-    partialsDir: path.join(app.get("views"), "partials"),
-    extname: ".hbs",
-    helpers: require("./lib/handlebars"),
-  })
+    ".hbs",
+    exphbs({
+        defaultLayout: "main",
+        layoutsDir: path.join(app.get("views"), "layouts"),
+        partialsDir: path.join(app.get("views"), "partials"),
+        extname: ".hbs",
+        helpers: require("./lib/handlebars"),
+    })
 );
+
 app.set("view engine", ".hbs");
 
 // Middlewares
@@ -36,23 +38,28 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.use(
-  session({
-    secret: "faztmysqlnodemysql",
-    resave: false,
-    saveUninitialized: false,
-    store: new MySQLStore(database),
-  })
+    session({
+        secret: "faztmysqlnodemysql",
+        resave: false,
+        saveUninitialized: false,
+        store: new MySQLStore(database),
+    })
 );
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 
+//File upload
+app.use(fileUpload({
+    useTempFiles : true,
+}));
+
 // Global variables
 app.use((req, res, next) => {
-  app.locals.message = req.flash("message");
-  app.locals.success = req.flash("success");
-  app.locals.user = req.user;
-  next();
+    app.locals.message = req.flash("message");
+    app.locals.success = req.flash("success");
+    app.locals.user = req.user;
+    next();
 });
 
 // Routes

@@ -1,0 +1,78 @@
+<div class="app-content content">
+    <div class="content-wrapper">
+
+        <div class="content-header row">
+            <div class="content-header-left col-md-8 col-12 mb-2 breadcrumb-new">
+                <h3 class="content-header-title mb-0 d-inline-block"><i class="ft-cpu"></i> DCU </h3>
+                <div class="row breadcrumbs-top d-inline-block">
+                    <div class="breadcrumb-wrapper col-12">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+                            <li class="breadcrumb-item"><a href="/dcu">DCU</a></li>
+                            <li class="breadcrumb-item active">{{dcu.Name}}</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="content-header-right col-md-4 col-12 d-none d-md-inline-block">
+                <div class="btn-group float-md-right">
+                </div>
+            </div>
+        </div>
+
+        <div class="content-body">
+            <div class="row">
+                <div class="col-12 col-md-12">
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h6 class="card-title">{{dcu.Name}}</h6>
+                            <div class="mt-1">
+                                <a href="/dcu/stop/{{dcu.InstanceId}}" class="btn-sm btn btn-outline-warning round">Stop</a>
+                                <a href="/dcu/delete/{{dcu.InstanceId}}" class="btn-sm btn btn-outline-danger round">Delete</a>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <td>Instance ID</td>
+                                            <td><i class="ft-cpu"></i> {{dcu.InstanceId}}</td>
+                                            <td>Created</td>
+                                            <td>{{dcu.CreatedAt}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Status</td>
+                                            <td><i class="las la-check-circle success"></i> {{dcu.Status}}</td>
+                                            <td>Modified</td>
+                                            <td>{{dcu.UpdatedAt}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Public DNS</td>
+                                            <td>{{dcu.Endpoint}}</td>
+                                            <td>Ports</td>
+                                            <td>{{dcu.Ports}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Instance Type</td>
+                                            <td>{{dcu.InstanceType}}</td>
+                                            <td>Image Name</td>
+                                            <td>{{dcu.ImageName}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Error</td>
+                                            <td>{{dcu.Err}}</td>
+                                            <td>Error Timestamp</td>
+                                            <td>{{dcu.ErrAt}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

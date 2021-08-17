@@ -1,0 +1,43 @@
+.crypto-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 96px;
+    height: 96px;
+    background-color: #F6F6F9;
+    border-radius: 50%;
+}
+.crypto-circle i {
+    font-size: 2.5rem!important;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+#account-login .card-account-left {
+    background: -webkit-gradient(linear, left top, right top, from(#266db9), to(#153b71));
+    background: -webkit-linear-gradient(left, #266db9, #153b71);
+    background: -moz-linear-gradient(left, #266db9, #153b71);
+    background: -o-linear-gradient(left, #266db9, #153b71);
+    background: linear-gradient(90deg, #266db9, #153b71);
+    border-radius: 5px 0 0 5px;
+}
+#account-login .card-account-left .card-account-img {
+    position: relative;
+    top: -webkit-calc(200px - 125px);
+    top: -moz-calc(200px - 125px);
+    top: calc(200px - 125px);
+}
+#account-register .card-account-left {
+    background: -webkit-gradient(linear, left top, right top, from(#266db9), to(#153b71));
+    background: -webkit-linear-gradient(left, #266db9, #153b71);
+    background: -moz-linear-gradient(left, #266db9, #153b71);
+    background: -o-linear-gradient(left, #266db9, #153b71);
+    background: linear-gradient(90deg, #266db9, #153b71);
+    border-radius: 5px 0 0 5px;
+}
+#account-register .card-account-left .card-account-img {
+    position: relative;
+    top: -webkit-calc(200px - 125px);
+    top: -moz-calc(200px - 125px);
+    top: calc(200px - 125px);
+}

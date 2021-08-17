@@ -1,0 +1,65 @@
+<div class="app-content content">
+    <div class="content-wrapper">
+
+        <div class="content-header row">
+            <div class="content-header-left col-md-8 col-12 mb-2 breadcrumb-new">
+                <h3 class="content-header-title mb-0 d-inline-block"><i class="las la-network-wired"></i> Proxy </h3>
+                <div class="row breadcrumbs-top d-inline-block">
+                    <div class="breadcrumb-wrapper col-12">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+                            <li class="breadcrumb-item"><a href="/proxy">Proxy</a></li>
+                            <li class="breadcrumb-item active">{{row.Name}}</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="content-header-right col-md-4 col-12 d-none d-md-inline-block">
+                <div class="btn-group float-md-right">
+                </div>
+            </div>
+        </div>
+
+        <div class="content-body">
+            <div class="row">
+                <div class="col-12 col-md-12">
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h6 class="card-title">{{row.Name}}</h6>
+                            <div class="mt-1">
+                                <a href="/serverless/delete/{{row.InstanceId}}" class="btn-sm btn btn-outline-danger round">Delete</a>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <td>Instance ID</td>
+                                            <td><i class="ft-cpu"></i> {{row.InstanceId}}</td>
+                                            <td>Created</td>
+                                            <td>{{row.CreatedAt}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Status</td>
+                                            <td><i class="las la-check-circle success"></i> {{row.Status}}</td>
+                                            <td>Modified</td>
+                                            <td>{{row.UpdatedAt}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Endpoint</td>
+                                            <td>us1.planetr.io:8009</td>
+                                            <td>Error</td>
+                                            <td>{{row.Err}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
